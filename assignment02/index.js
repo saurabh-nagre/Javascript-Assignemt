@@ -49,9 +49,17 @@ console.log(myArray)
 //->We can modify contents of array or object element, add or remove element,
 //->but for the const array or object, we can't reassign it.
 
-myArray = []
+// myArray = []
 
 // Q. What is the difference between an object declared as a let or a const variable?
 
-// ->We can reassign new value to the let variable, also it has a bloack scope
-// ->on the other hand, we can't reassign const variable, and it has a global scope (memory is assign gloablly)
+// ->We can reassign new value to the let variable on the other hand, we can't reassign const variable 
+// ->Both let and const variable have block scope
+// -> hoisting does not works in both let and const, gives reference error 
+
+function hello(){
+    console.log(hi);
+    const hi = 100;
+}
+
+hello();
