@@ -54,8 +54,10 @@ console.log(myArray)
 // Q. What is the difference between an object declared as a let or a const variable?
 
 // ->We can reassign new value to the let variable on the other hand, we can't reassign const variable 
+// ->let can be declared without being initialized, const must be initialized during declaration.
+
 // ->Both let and const variable have block scope
-// -> hoisting does not works in both let and const, gives reference error 
+// -> hoisting does not works in both let and const,let and const are hoisted top of scope but are uninitialize, gives reference error 
 
 function hello(){
     console.log(hi);
