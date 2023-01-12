@@ -18,12 +18,28 @@ else
 
 // 2.  Do the same using switch case.
 // Switch statements
-
-switch(age){
-    case age <= 12:
+age = 14
+switch (age) {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+    case 7:
+    case 8:
+    case 9:
+    case 10:
+    case 11:
+    case 12:
         console.log("child")
         break;
-    case age<=18:
+    case 13:
+    case 14:
+    case 15:
+    case 16:
+    case 17:
+    case 18:
         console.log("teen")
         break
     default:
@@ -55,4 +71,4 @@ console.log(arr)
 
 // 5. Can you use return instead of break in loops?
 // ->When we have loop at the end of the function, we can use return instead of break
-// ->return statement exits the function and returns the undefined or value;
+// ->return statement moves the control from where function is called and returns the undefined or value;
