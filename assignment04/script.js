@@ -1,15 +1,14 @@
     // 1. What happens when you add a for loop /while loop /switch case block inside a function and use return instead of break? 
-        // -> It returns undefined, 'return' keyword will stop the function execution completely & return directly to the point where function was called
+        // -> 'return' keyword will stop the function execution completely & return directly to the point where function was called
     // Do statements after the loop run ?
         // -> NO
     //  What is the return value ?
-        // -> A function is called to perform some actions or compute the result using passed argument inside the function and
-        // if result is return by function, then result is called as return value.
+        // -> 'undefined' is return if no value is return 
 
     // Can we pass a return value from within a loop ? Can you return from inside an if block ?
         // -> Yes,
     // What impact does that have ?
-        // ->the statements after return statement will not executed.
+        // ->the statements after return statement will not execute.
 
     // 2. Take a function that accepts a function as a parameter(also known as callback function).
     function test(callback) {
@@ -39,3 +38,4 @@
 
     // What happens when you return callback from the test function?
         // ->  return callbackFunc function in the console. 
+
