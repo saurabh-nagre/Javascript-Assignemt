@@ -132,17 +132,63 @@ let b;
 
 // 6. sort function with strings 
 
-let arr = ["acd", "dcd", "fde", "rfs","Acrd"]
-arr = arr.map((val)=>val.toLowerCase())
+let arr = ["acd", "dcd", "fde", "rfs", "Acrd"]
+arr = arr.map((val) => val.toLowerCase())
 
-arr.sort((a , b) => a == b ? 0 : (a < b ? -1 : 1))
+arr.sort((a, b) => a == b ? 0 : (a < b ? -1 : 1))
+
+
+var myArray = [
+    { "id": "5001", "type": "None", "price": 0 },
+    { "id": "5002", "type": "Glazed", "price": 50 },
+    { "id": "5005", "type": "Sugar", "price": 10 },
+    { "id": "5007", "type": "Powdered Sugar", "price": 20 },
+    { "id": "5006", "type": "Chocolate with Sprinkles", "price": 60 },
+    { "id": "5003", "type": "Chocolate", "price": 30 },
+    { "id": "5004", "type": "Maple", "price": 25 }
+]
+
+
+arr.sort((a, b) => a.type > b.type ? 1 : -1)
+
+// -> result
+// { id: "5003", type: "Chocolate", price: 30 }
+
+// { id: "5006", type: "Chocolate with Sprinkles", price: 60 }
+
+// { id: "5002", type: "Glazed", price: 50 }
+
+// { id: "5004", type: "Maple", price: 25 }
+
+// { id: "5001", type: "None", price: 0 }
+
+// { id: "5007", type: "Powdered Sugar", price: 20 }
+
+// { id: "5005", type: "Sugar", price: 10 }
 
 // 7. reduce function
 
 var myArray = [10, 11, 14, 15, 17, 9, 2, 4, 5, 9, 18]
 
-var sum = myArray.reduce((acc,val)=>{
-   return acc+=val;
-},0)
+var sum = myArray.reduce((acc, val) => {
+    return acc += val;
+}, 0)
+
+
+var myArray = [
+    { "id": "5001", "type": "None", "price": 0 },
+    { "id": "5002", "type": "Glazed", "price": 50 },
+    { "id": "5005", "type": "Sugar", "price": 10 },
+    { "id": "5007", "type": "Powdered Sugar", "price": 20 },
+    { "id": "5006", "type": "Chocolate with Sprinkles", "price": 60 },
+    { "id": "5003", "type": "Chocolate", "price": 30 },
+    { "id": "5004", "type": "Maple", "price": 25 }
+]
+
+sum = myArray.reduce((acc, val) => {
+    return acc += val.type + " "
+}, "")
 
 console.log(sum)
+
+// -> result = None Glazed Sugar Powdered Sugar Chocolate with Sprinkles Chocolate Maple 
