@@ -165,7 +165,7 @@ var arr = [{
 function getById(index){
 
     return arr.find((val)=>{
-        return val.id==index
+        return val.id===index
     })
 }
 
